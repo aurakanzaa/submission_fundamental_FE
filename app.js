@@ -1,4 +1,4 @@
-import "generator-runtime";
+import "regenerator-runtime";
 import "./styles/style.css";
 import "./script/component/app-bar.js";
 import "./script/component/meal-item.js";

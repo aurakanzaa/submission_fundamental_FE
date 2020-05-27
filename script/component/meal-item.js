@@ -58,3 +58,5 @@ class MealItem extends HTMLElement {
         `
     }
 }
+
+customElements.define("meal-item", MealItem);

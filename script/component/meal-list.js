@@ -36,4 +36,4 @@ class MealList extends HTMLElement {
     }
 }
 
-customElements.define("meal-list", MediaList);
+customElements.define("meal-list", MealList);

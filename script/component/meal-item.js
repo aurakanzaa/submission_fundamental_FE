@@ -4,8 +4,8 @@ class MealItem extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: "open"});
     }
 
-    set meal(meal) {
-        this._meal = meal;
+    set meal(item) {
+        this.item = item;
         this.render();
     }
 
@@ -50,10 +50,10 @@ class MealItem extends HTMLElement {
                 }
 
             </style>
-            <img class="fan-art-meal" src="${this._meal.strTeamBadge}" alt="Fan Art">
+            <img class="fan-art-meal" src="${this._item.strMealThumb}" alt="Fan Art">
             <div class="meal-info">
-                <h2>${this._meal.strTeam}</h2>
-                <p>${this._meal.strDescriptionEN}</p>
+                <h2>${this.item.strMeal}</h2>
+                <p>${this._item.strCategory}</p>
             </div>
         `
     }

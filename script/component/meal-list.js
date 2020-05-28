@@ -6,16 +6,16 @@ class MealList extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: "open"});
     }
 
-    set meals(meals) {
-        this._meals = meals;
+    set meals(items) {
+        this._items = items;
         this.render();
     }
 
     render(){
         this.shadowDOM.innerHTML = "";
-        this._meals.forEach(element => {
+        this._items.forEach(item => {
             const mealItemElement = document.createElement("meal-item");
-            mealItemElement.meal = meal;
+            mealItemElement.meal = item;
             this.shadowDOM.appendChild(mealItemElement);
         });
     }

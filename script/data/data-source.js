@@ -1,8 +1,8 @@
-// import meals from './meals.js';
+import meals from './meals.js';
 
 class DataSource {
-    static searchMeals(keyword) {
-        return fetch (`https://www.themealdb.com/api/json/v1/1/search.php?f=${keyword}`)
+    static searchMeal(keyword) {
+        return fetch (`https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`)
             .then(response => {
                 return response.json()
             })

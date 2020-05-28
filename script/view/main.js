@@ -8,23 +8,22 @@ const main = () => {
 
     const onButtonSearchClicked = async () => {
         try{
-            const result = await DataSource.searchMeals(searchElement.value);
+            const result = await DataSource.searchMeal(searchElement.value);
             renderResult(result);
         }catch (message) {
             fallbackResult(message);
         }
     };
 
-    const renderResult = result => {
+    const renderResult = results => {
         mealListElement.meals = results;
     };
-
+  
     const fallbackResult = message => {
         mealListElement.renderError(message);
     };
-
+  
     searchElement.clickEvent = onButtonSearchClicked;
-
-};
-
-export default main;
+ };
+  
+ export default main;

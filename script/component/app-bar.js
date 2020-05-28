@@ -4,7 +4,7 @@ class AppBar extends HTMLElement {
         this.shadowDOM = this. attachShadow({mode: "open"});
     }
 
-    connectCallbak() {
+    connectedCallbak() {
         this.render();
     }
 
@@ -26,9 +26,9 @@ class AppBar extends HTMLElement {
             h2 {
                 padding: 16px;
             }
+            
         </style>
-        <h2>Search Meals</h2>
-        `;
+        <h2>Makan makan yuk</h2>`;
     }
 }
 

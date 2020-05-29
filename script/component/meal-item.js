@@ -1,3 +1,5 @@
+import DataSource from '../data/data-source.js';
+
 class MealItem extends HTMLElement {
     constructor(){
         super();
@@ -5,7 +7,7 @@ class MealItem extends HTMLElement {
     }
 
     set meal(item) {
-        this.item = item;
+        this._item = item;
         this.render();
     }
 
@@ -52,7 +54,7 @@ class MealItem extends HTMLElement {
             </style>
             <img class="fan-art-meal" src="${this._item.strMealThumb}" alt="Fan Art">
             <div class="meal-info">
-                <h2>${this.item.strMeal}</h2>
+                <h2>${this._item.strMeal}</h2>
                 <p>${this._item.strCategory}</p>
             </div>
         `

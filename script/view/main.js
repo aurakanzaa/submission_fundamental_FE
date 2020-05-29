@@ -6,28 +6,28 @@ const main = () => {
     const searchElement = document. querySelector("search-bar");
     const mealListElement = document.querySelector("meal-list");
 
-    // const onButtonSearchClicked = async () => {
-    //     try{
-    //         const result = await DataSource.searchMeal(searchElement.value);
-    //         renderResult(result);
-    //     }catch (message) {
-    //         fallbackResult(message);
-    //     }
-    // };
-   
-    const onButtonSearchClicked = () => {
-        searchMeal(searchElement.nodeValue);
-    };
-
-    const searchMeal = async (keyword) => {
-        // loaderElement.style.display = 'block';
-        try {
-            const result = await DataSource.searchMeal(keyword);
+    const onButtonSearchClicked = async () => {
+        try{
+            const result = await DataSource.searchMeal(searchElement.value);
             renderResult(result);
-        } catch {
-            fallbackResult(message)
+        }catch (message) {
+            fallbackResult(message);
         }
     };
+   
+    // const onButtonSearchClicked = () => {
+    //     searchMeal(searchElement.nodeValue);
+    // };
+
+    // const searchMeal = async (keyword) => {
+    //     // loaderElement.style.display = 'block';
+    //     try {
+    //         const result = await DataSource.searchMeal(keyword);
+    //         renderResult(result);
+    //     } catch {
+    //         fallbackResult(message)
+    //     }
+    // };
 
     const renderResult = results => {
         mealListElement.meals = results;

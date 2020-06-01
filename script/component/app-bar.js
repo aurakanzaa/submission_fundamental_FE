@@ -4,7 +4,7 @@ class AppBar extends HTMLElement {
         this.shadowDOM = this. attachShadow({mode: "open"});
     }
 
-    connectedCallbak() {
+    connectedCallback() {
         this.render();
     }
 
@@ -17,7 +17,7 @@ class AppBar extends HTMLElement {
                 box-sizing: border-box;
             }
             :host {
-                display: box;
+                display: block;
                 width: 100%;
                 background-color: cornflowerblue;
                 color: white;
